@@ -31,9 +31,9 @@ public class Trunk {
 
         this.increaseHeight();
 
-        for (Branch branch : this.branches) {
-            branch.growUp(leafGrowthRatio);
-        }
+        this.branches.forEach(b -> {
+            b.growUp(leafGrowthRatio);
+        });
         this.increaseBranchesNumber();
     }
 
@@ -55,9 +55,9 @@ public class Trunk {
         if (leafDropRatio <= 0) {
             return;
         }
-        for (Branch branch : this.branches) {
-            branch.decreaseLeavesNumber(leafDropRatio);
-        }
+        this.branches.forEach(b -> {
+            b.decreaseLeavesNumber(leafDropRatio);
+        });
     }
 
 }

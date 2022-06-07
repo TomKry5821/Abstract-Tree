@@ -22,9 +22,10 @@ public class Conifer extends Tree {
     public String toString() {
         StringBuilder result = new StringBuilder();
         result.append("Tree type - " + this.getClass().getSimpleName() + "\n").append("Leaf type - " + this.LEAF_TYPE.toString().toLowerCase(Locale.ROOT) + "\n");
-        for (Branch branch : this.getTrunk().getBranches()) {
-            result.append("BRANCH\n").append("Needles number - ").append(branch.getLeavesNumber()).append("\n");
-        }
+        this.getTrunk().getBranches().forEach(b -> {
+            result.append("BRANCH\n").append("Needles number - ").append(b.getLeavesNumber()).append("\n");
+        });
+
         return result.toString();
     }
 }
