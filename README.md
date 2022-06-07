@@ -1,7 +1,7 @@
-#Abstract Tree
+# Abstract Tree
 #### Project purpose - Create and test a program to simulate tree growth over time.
 
-####How it works
+#### How it works
 In program, we have Abstract class Tree from which two classes inherit:
  - LeafTree
  - Conifer
